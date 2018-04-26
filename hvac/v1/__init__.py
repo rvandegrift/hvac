@@ -607,7 +607,7 @@ class Client(object):
             'role': role,
             'jwt': jwt
             }
-        return self.auth('/v1/auth/kubernetes/login', json=params, use_token=use_token).json()
+        return self.auth('/v1/auth/kubernetes/login', json=params, use_token=use_token)
 
     def list_kubernetes_roles(self):
         """
